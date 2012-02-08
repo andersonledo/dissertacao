@@ -55,9 +55,40 @@ showstringspaces=false
 \sloppy
 
 
+% Environment for the MOFScript Language
+\newenvironment{mofscript}
+{
+\lstdefinelanguage{mofscript}
+  {morekeywords={texttransformation, import, module, var, property, String, Integer, Real, List, Hashmap, self, if, else, true, false, not, result, return, ->, date, file, print, println, select, collect, first, last, size},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+}
+
+\lstset{numbers=left,
+	language=mofscript,
+	stepnumber=1,
+	firstnumber=1,
+	numberstyle=\tiny,
+	extendedchars=true,
+	breaklines=true,
+	breakindent=25pt,
+	lineskip=2.5pt,
+	frame=tb,
+	%basicstyle=\ttfamily ,
+	basicstyle=\small,
+	stringstyle=\ttfamily,
+	showstringspaces=false,
+	xleftmargin=15pt,
+}
+
+}
+
+% END OF THE MOFSCRIPT ENVIRONMENT
+
 
 \begin{document}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,7 +162,6 @@ showstringspaces=false
 %
 \hyphenation{ Hardware Software etc  }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% A partir daqui coloque seus capitulos. Sugere-se que eles sejam inseridos com o comando \input
 %% Da seguinte maneira:
@@ -139,6 +169,8 @@ showstringspaces=false
 %% \input{cap1} 
 %% \input{cap2}
 \input{cap1}
+\input{FundamentacaoTeorica}
+\input{MetaTT}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
